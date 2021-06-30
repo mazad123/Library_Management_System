@@ -8,7 +8,6 @@ const messages = messagesList.message.MESSAGES;
 const statusCode = statusCodeList.statusCodes.STATUS_CODE;
 const constant = constantList.constant;
 
-
 const login = async (req, res, next) => {
   try {
     const message = messages.SUCESS;
@@ -20,7 +19,7 @@ const login = async (req, res, next) => {
 
 const getRegister = async (req, res) => {
   console.log('get register work fine');
-  res.render('admin/register');
+  res.render('admin/index-admin', { title: 'Indus Admin', path: 'register' });
 }
 
 const register = async (req, res, next) => {
