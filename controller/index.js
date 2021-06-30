@@ -1,8 +1,3 @@
-// module.exports = {
-//     // authController: require('./member/authController'),
-// };
-
-
 module.exports = {
-    authController: require('./admin/authController'),
+    authController: require('./Admin/auth.controller'),
 };
