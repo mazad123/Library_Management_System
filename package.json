@@ -17,27 +17,17 @@
   },
   "homepage": "https://github.com/mazad123/Library_Management_System#readme",
   "dependencies": {
-<<<<<<< HEAD
-    "body-parser": "^1.19.0",
-    "cookie-parser": "^1.4.5",
-    "express": "^4.17.1",
-=======
     "bcrypt": "^5.0.0",
     "body-parser": "^1.19.0",
     "cookie-parser": "^1.4.5",
     "ejs": "~2.6.1",
     "express": "^4.17.1",
     "jsonwebtoken": "^8.5.1",
->>>>>>> 50304ffc1e0a4ef2f7990ee0c8cae5db4d886fb4
     "mongodb": "^3.6.9",
     "mongoose": "^5.10.15",
     "mongoose-auto-increment": "^5.0.1",
     "multer": "^1.4.2",
     "nodemon": "^2.0.7",
-<<<<<<< HEAD
-    "ejs": "~2.6.1"
-=======
     "express-validator": "^6.9.2"
->>>>>>> 50304ffc1e0a4ef2f7990ee0c8cae5db4d886fb4
   }
 }

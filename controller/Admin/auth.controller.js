@@ -1,13 +1,8 @@
-<<<<<<< HEAD
-const Model = require("../../Model");
-
-=======
 const bcrypt = require('bcrypt');
 const jwt = require("jsonwebtoken");
 const { body, check, validationResult } = require('express-validator');
 
 const Model = require("../../Model");
->>>>>>> 50304ffc1e0a4ef2f7990ee0c8cae5db4d886fb4
 const messagesList = require('../../Message');
 const statusCodeList = require("../../StatusCode");
 const constantList = require("../../Constant");
@@ -16,36 +11,6 @@ const messages = messagesList.message.MESSAGES;
 const statusCode = statusCodeList.statusCodes.STATUS_CODE;
 const constant = constantList.constant;
 
-<<<<<<< HEAD
-const login = async (req, res, next) => {
-  try {
-    const message = messages.SUCESS;
-    return res.send({ message: message, string: 'Api works fine', statusCode: statusCode.SUCCESS, constant:'Role Admin - '+ constant.ROLE.ADMIN });
-  } catch (error) {
-    console.log(error);
-  }
-}
-
-const getRegister = async (req, res) => {
-  console.log('get register work fine');
-  res.render('admin/index-admin', { title: 'Indus Admin', path: 'register' });
-}
-
-const register = async (req, res, next) => {
-  try {
-    const admin = await new Model.Admin(req.body).save();
-    if (admin) {
-      return res.send({
-        statusCode: statusCode.CREATED,
-        messages: messages.ADMIN_REGISTER_SUCCESS,
-        data: admin
-      });
-    } else {
-      return res.send({
-        statusCode: statusCode.BAD_REQUEST,
-        messages: messages.ADMIN_REGISTER_FAIL
-      });
-=======
 const getRegister = async (req, res) => {
   res.render('admin/index-admin', { title: 'Admin', path: 'register', message:'' });
 }
@@ -76,25 +41,10 @@ const submitRegister = async (req, res, next) => {
       //   statusCode: statusCode.BAD_REQUEST,
       //   messages: messages.ADMIN_REGISTER_FAIL
       // });
->>>>>>> 50304ffc1e0a4ef2f7990ee0c8cae5db4d886fb4
     }
 
   } catch (err) {
     console.log('err -  ', err);
-<<<<<<< HEAD
-    return res.send({
-      statusCode: statusCode.INTERNAL_SERVER_ERROR,
-      messages: messages.INTERNAL_SERVER_ERROR,
-      data:err
-    });
-  }
-
-}
-
-exports.login = login;
-exports.register = register;
-exports.getRegister = getRegister;
-=======
     return res.render('admin/index-admin', { title: 'Admin', path: 'register', message:err});
     // return res.send({
     //   statusCode: statusCode.INTERNAL_SERVER_ERROR,
@@ -172,4 +122,3 @@ exports.submitRegister = submitRegister;
 exports.getLogin = getLogin;
 exports.submitLogin = submitLogin;
 exports.validate = validate;
->>>>>>> 50304ffc1e0a4ef2f7990ee0c8cae5db4d886fb4
